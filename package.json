@@ -1,0 +1,16 @@
+{
+  "name": "obsidian-utils",
+  "version": "1.0.0",
+  "description": "Utils for Obsidian.md and .md files",
+  "main": "index.js",
+  "author": "Sergey Mitrichev",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node index.js",
+    "unrelated": "node index.js 0"
+  },
+  "dependencies": {
+    "prompts": "^2.3.2"
+  }
+}
