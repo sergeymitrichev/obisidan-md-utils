@@ -15,7 +15,7 @@ let [mode] = process.argv.slice(2);
     }
   ]);
   const trailedSlashPath = path.endsWith('/') ? path : `${path}/`;
-  const mdFiles = fs.readdirSync(path).filter(file => file.toLowerCase().endsWith('.md')).map(file => `${trailedSlashPath}${file}`);
+  const mdFiles = fs.readdirSync(path).filter(file => file.toLowerCase().endsWith('.md'));
 
   (mode >= 0) || ({ mode } = await promptMode());
   
@@ -23,7 +23,7 @@ let [mode] = process.argv.slice(2);
 
   switch(mode) {
     case UNRELATED: {
-      unrelated(mdFiles);
+      unrelated(mdFiles, trailedSlashPath);
       break;
     }
     case EXIT:
